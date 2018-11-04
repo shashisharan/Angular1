@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <script src="app.js">   </script>
+        <title>Hello! Angularjs 1</title>
+    </head>
+    <body>
+        <h1>First Application</h1>
+
+        <div ng-app="myApp">
+            <div ng-controller='nameController'>
+                    First Name: <input type="text" ng-model="firstName"><br>
+                    Last Name: <input type="text" ng-model="lastName"><br>  
+                <p>First Name: <span>{{firstName}}</span></p>
+                <p>Second Name: <span ng-bind='lastName'></span></p>
+                
+            </div>
+            <div ng-controller='addressController'>
+                <p>Address is<span>{{address}}</span></p>
+                
+            </div>
+            
+        </div>
+    </body>
+</html>
