@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <title>Hello! Angularjs 1</title>
+    </head>
+    <body>
+        <h1>ng-init and ng-repeat example</h1>
+
+        <div ng-app="" ng-init="countries=[{name:'India',Language:'hindi'},{name:'Nepal',Language:'nepali'}]">
+            <p>Enter Your name:<input type="text" ng-model="name"></p>
+            <p>hello! <span ng-bind="name">!</span></p>
+            <p>Here is the list of countries and there languages</p>
+            <ol>
+<li ng-repeat="country in countries">{{'country '+country.name+' Language: '+country.Language}}</li>
+            
+            </ol>
+        </div>
+    </body>
+</html>
