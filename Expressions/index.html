@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <title>Hello! Angularjs 1</title>
+    </head>
+    <body>
+        <h1>ng-init and ng-repeat example</h1>
+
+        <div ng-app="" ng-init="noOfPencils='3';cost='4';students=[{fname:'shashi',lname:'sharan'},{fname:'ravi',lname:'sharan'}]">
+            <p>Enter Your name:<input type="text" ng-model="name"></p>
+            <p>hello! <span ng-bind="name">!</span></p>
+            <p>Here is the list of stdents with there fname and lname</p>
+            <ol>
+<li ng-repeat="student in students">{{'firstName '+student.fname+' secondName: '+student.lname}}</li>
+            
+            </ol>
+            <p>Cost per pencils is<span>{{cost}}</span></p>
+            <p>pencil per student is <span>{{noOfPencils}}</span></p>
+            <p>no of students is <span>{{students.length}}</span></p>
+            <p>Total Cost is<span>{{noOfPencils*cost*students.length}}</span></p>
+        </div>
+    </body>
+</html>
